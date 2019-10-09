@@ -9,7 +9,7 @@ const Form = props => {
 
     return(
         <form>
-            <label htmlFor='name'>Name</label>
+            <label htmlFor='name'>Name: </label>
             <input
                 id="name"
                 name="name"
@@ -17,7 +17,7 @@ const Form = props => {
                 type="text"
                 onChange={changedItem}
             />
-            <label htmlFor='email'>Email</label>
+            <label htmlFor='email'>Email: </label>
             <input
                 id="email"
                 name="email"
@@ -25,7 +25,7 @@ const Form = props => {
                 type="text"
                 onChange={changedItem}
             />
-            <label htmlFor='role'>Name</label>
+            <label htmlFor='role'>Role: </label>
             <input
                 id="role"
                 name="role"
@@ -33,6 +33,8 @@ const Form = props => {
                 type="text"
                 onChange={changedItem}
             />
+            <button type="submit">Add Member</button>
         </form>
     )
 }
+export default Form;
