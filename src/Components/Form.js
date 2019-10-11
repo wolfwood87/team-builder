@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import '../App.css';
 
 const Form = props => {
@@ -13,6 +13,9 @@ const Form = props => {
         props.addMember(member);
         setMember({ name: '', email: '', role: '' })
     }
+    useEffect(() => {
+        return setMember (props.memberToEdit || {name: '', email: '', role: ''})
+    }, [props.memberToEdit])
     return(
         <form onSubmit={newSubmit} className="mem-form">
             <div className="mem-wrapper">
